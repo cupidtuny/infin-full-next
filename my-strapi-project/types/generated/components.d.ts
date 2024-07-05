@@ -176,7 +176,7 @@ export interface HomeHomeChoose extends Schema.Component {
   };
   attributes: {
     title: Attribute.String;
-    article: Attribute.Component<'article.article'>;
+    article: Attribute.Component<'article.article', true>;
   };
 }
 
