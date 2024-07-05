@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_marketing_landingpage_s",
+  "info": {
+    "displayName": "landingpage",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "question1": {
+      "type": "text"
+    },
+    "question2": {
+      "type": "text"
+    },
+    "answer": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "call": {
+      "type": "component",
+      "repeatable": false,
+      "component": "button.button"
+    }
+  }
+}

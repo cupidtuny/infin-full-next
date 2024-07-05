@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_marketing_section4s",
+  "info": {
+    "displayName": "section4"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "step": {
+      "type": "component",
+      "repeatable": false,
+      "component": "step.step"
+    }
+  }
+}

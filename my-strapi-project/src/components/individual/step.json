@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_individual_steps",
+  "info": {
+    "displayName": "step",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "step": {
+      "type": "component",
+      "repeatable": false,
+      "component": "step.step"
+    }
+  }
+}

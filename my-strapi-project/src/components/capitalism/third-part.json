@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_capitalism_third_parts",
+  "info": {
+    "displayName": "thirdPart"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "text": {
+      "type": "text"
+    },
+    "descritpion": {
+      "type": "string"
+    }
+  }
+}

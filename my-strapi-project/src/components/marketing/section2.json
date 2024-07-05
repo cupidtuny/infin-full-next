@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_marketing_section2s",
+  "info": {
+    "displayName": "section2"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "descritpion": {
+      "type": "text"
+    },
+    "question": {
+      "type": "text"
+    },
+    "discover": {
+      "type": "enumeration",
+      "enum": [
+        "first",
+        "second",
+        "third",
+        "fourth"
+      ]
+    }
+  }
+}

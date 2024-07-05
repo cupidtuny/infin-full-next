@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_capitalism_description_1s",
+  "info": {
+    "displayName": "description-1"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

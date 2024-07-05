@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_individual_charts",
+  "info": {
+    "displayName": "chart"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "descritpionOne": {
+      "type": "text"
+    },
+    "descritpionTwo": {
+      "type": "text"
+    },
+    "organizationTitle": {
+      "type": "string"
+    },
+    "organizationContent": {
+      "type": "text"
+    },
+    "device": {
+      "type": "component",
+      "repeatable": false,
+      "component": "button.button"
+    }
+  }
+}

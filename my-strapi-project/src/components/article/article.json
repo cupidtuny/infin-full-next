@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_article_articles",
+  "info": {
+    "displayName": "article",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "descritpion": {
+      "type": "string"
+    },
+    "title": {
+      "type": "text"
+    },
+    "avata": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

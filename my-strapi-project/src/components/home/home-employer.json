@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_home_home_employers",
+  "info": {
+    "displayName": "home-employer",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "button.button"
+    },
+    "topleft": {
+      "type": "string"
+    },
+    "topright": {
+      "type": "string"
+    },
+    "bottomright": {
+      "type": "string"
+    },
+    "bottomleft": {
+      "type": "string"
+    }
+  }
+}

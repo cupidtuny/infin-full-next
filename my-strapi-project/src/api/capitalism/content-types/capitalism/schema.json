@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "capitalisms",
+  "info": {
+    "singularName": "capitalism",
+    "pluralName": "capitalisms",
+    "displayName": "capitalism",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "capitalism.description-1",
+        "capitalism.description-2",
+        "capitalism.description-3",
+        "capitalism.landingpage",
+        "capitalism.second-part",
+        "capitalism.third-part"
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_business_business_descriptions",
+  "info": {
+    "displayName": "business-description"
+  },
+  "options": {},
+  "attributes": {
+    "descritpion": {
+      "type": "text"
+    }
+  }
+}

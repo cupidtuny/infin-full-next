@@ -1,0 +1,48 @@
+{
+  "collectionName": "components_marketing_section5s",
+  "info": {
+    "displayName": "section5",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "descritpionOne": {
+      "type": "text"
+    },
+    "descritpionTwo": {
+      "type": "text"
+    },
+    "descritpionThree": {
+      "type": "text"
+    },
+    "descritpionFour": {
+      "type": "text"
+    },
+    "call": {
+      "type": "component",
+      "repeatable": false,
+      "component": "button.button"
+    },
+    "quesiton": {
+      "type": "text"
+    },
+    "property": {
+      "type": "enumeration",
+      "enum": [
+        "first",
+        "second",
+        "third",
+        "fourth",
+        "fifth",
+        "sixth",
+        "seventh"
+      ]
+    },
+    "descBtn": {
+      "type": "text"
+    }
+  }
+}

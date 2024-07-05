@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_business_can_useds",
+  "info": {
+    "displayName": "can-used"
+  },
+  "options": {},
+  "attributes": {
+    "title1": {
+      "type": "string"
+    },
+    "title2": {
+      "type": "string"
+    },
+    "descritpion": {
+      "type": "component",
+      "repeatable": false,
+      "component": "article.article"
+    }
+  }
+}

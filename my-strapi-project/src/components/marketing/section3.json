@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_marketing_section3s",
+  "info": {
+    "displayName": "section3"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string"
+    },
+    "descritpionOne": {
+      "type": "text"
+    },
+    "descritpionTwo": {
+      "type": "text"
+    },
+    "descritpionThree": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

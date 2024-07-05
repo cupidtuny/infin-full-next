@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_home_home_starteds",
+  "info": {
+    "displayName": "home-started",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": true,
+      "component": "button.button"
+    }
+  }
+}

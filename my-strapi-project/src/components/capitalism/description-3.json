@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_capitalism_description_3s",
+  "info": {
+    "displayName": "description-3"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "descritpion": {
+      "type": "text"
+    }
+  }
+}

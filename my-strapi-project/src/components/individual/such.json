@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_individual_suches",
+  "info": {
+    "displayName": "such"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "descritpion": {
+      "type": "component",
+      "repeatable": false,
+      "component": "article.article"
+    }
+  }
+}

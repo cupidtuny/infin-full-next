@@ -590,6 +590,53 @@ export interface PluginContentReleasesReleaseAction
   };
 }
 
+export interface PluginI18NLocale extends Schema.CollectionType {
+  collectionName: 'i18n_locale';
+  info: {
+    singularName: 'locale';
+    pluralName: 'locales';
+    collectionName: 'locales';
+    displayName: 'Locale';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    'content-manager': {
+      visible: false;
+    };
+    'content-type-builder': {
+      visible: false;
+    };
+  };
+  attributes: {
+    name: Attribute.String &
+      Attribute.SetMinMax<
+        {
+          min: 1;
+          max: 50;
+        },
+        number
+      >;
+    code: Attribute.String & Attribute.Unique;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'plugin::i18n.locale',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'plugin::i18n.locale',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface PluginUsersPermissionsPermission
   extends Schema.CollectionType {
   collectionName: 'up_permissions';
@@ -741,73 +788,29 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
-export interface PluginI18NLocale extends Schema.CollectionType {
-  collectionName: 'i18n_locale';
-  info: {
-    singularName: 'locale';
-    pluralName: 'locales';
-    collectionName: 'locales';
-    displayName: 'Locale';
-    description: '';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  pluginOptions: {
-    'content-manager': {
-      visible: false;
-    };
-    'content-type-builder': {
-      visible: false;
-    };
-  };
-  attributes: {
-    name: Attribute.String &
-      Attribute.SetMinMax<
-        {
-          min: 1;
-          max: 50;
-        },
-        number
-      >;
-    code: Attribute.String & Attribute.Unique;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'plugin::i18n.locale',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'plugin::i18n.locale',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiBusinessBusiness extends Schema.CollectionType {
   collectionName: 'businesses';
   info: {
     singularName: 'business';
     pluralName: 'businesses';
     displayName: 'Business';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    title: Attribute.String & Attribute.Required & Attribute.Unique;
-    descritpion: Attribute.RichText & Attribute.Required;
-    image: Attribute.Media<'images'>;
-    video: Attribute.Media<'videos'>;
-    home: Attribute.Relation<
-      'api::business.business',
-      'oneToOne',
-      'api::home.home'
+    blocks: Attribute.DynamicZone<
+      [
+        'business.business-description',
+        'business.can-used',
+        'business.landingpage',
+        'business.leader-dream',
+        'business.video'
+      ]
     >;
+    title: Attribute.String;
+    slug: Attribute.UID;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -819,6 +822,46 @@ export interface ApiBusinessBusiness extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::business.business',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCapitalismCapitalism extends Schema.CollectionType {
+  collectionName: 'capitalisms';
+  info: {
+    singularName: 'capitalism';
+    pluralName: 'capitalisms';
+    displayName: 'capitalism';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    blocks: Attribute.DynamicZone<
+      [
+        'capitalism.description-1',
+        'capitalism.description-2',
+        'capitalism.description-3',
+        'capitalism.landingpage',
+        'capitalism.second-part',
+        'capitalism.third-part'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::capitalism.capitalism',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::capitalism.capitalism',
       'oneToOne',
       'admin::user'
     > &
@@ -838,14 +881,19 @@ export interface ApiHomeHome extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    title: Attribute.String & Attribute.Required & Attribute.Unique;
+    title: Attribute.String;
     Description: Attribute.RichText;
-    Image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
-      Attribute.Required;
-    business: Attribute.Relation<
-      'api::home.home',
-      'oneToOne',
-      'api::business.business'
+    Image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    slug: Attribute.UID;
+    blocks: Attribute.DynamicZone<
+      [
+        'home.home-business',
+        'home.home-choose',
+        'home.home-employer',
+        'home.home-hero',
+        'home.home-objective',
+        'home.home-started'
+      ]
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -853,6 +901,84 @@ export interface ApiHomeHome extends Schema.CollectionType {
     createdBy: Attribute.Relation<'api::home.home', 'oneToOne', 'admin::user'> &
       Attribute.Private;
     updatedBy: Attribute.Relation<'api::home.home', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiIndividualIndividual extends Schema.CollectionType {
+  collectionName: 'individuals';
+  info: {
+    singularName: 'individual';
+    pluralName: 'individuals';
+    displayName: 'individual';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    blocks: Attribute.DynamicZone<
+      [
+        'individual.chart',
+        'individual.landingpage',
+        'individual.step',
+        'individual.such',
+        'individual.your-self'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::individual.individual',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::individual.individual',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiMarketingMarketing extends Schema.CollectionType {
+  collectionName: 'marketings';
+  info: {
+    singularName: 'marketing';
+    pluralName: 'marketings';
+    displayName: 'marketing';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    blocks: Attribute.DynamicZone<
+      [
+        'marketing.landingpage',
+        'marketing.section2',
+        'marketing.section3',
+        'marketing.section4',
+        'marketing.section5'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::marketing.marketing',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::marketing.marketing',
+      'oneToOne',
+      'admin::user'
+    > &
       Attribute.Private;
   };
 }
@@ -871,12 +997,15 @@ declare module '@strapi/types' {
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
+      'plugin::i18n.locale': PluginI18NLocale;
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
-      'plugin::i18n.locale': PluginI18NLocale;
       'api::business.business': ApiBusinessBusiness;
+      'api::capitalism.capitalism': ApiCapitalismCapitalism;
       'api::home.home': ApiHomeHome;
+      'api::individual.individual': ApiIndividualIndividual;
+      'api::marketing.marketing': ApiMarketingMarketing;
     }
   }
 }

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_step_steps",
+  "info": {
+    "displayName": "step",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "stepNumber": {
+      "type": "biginteger"
+    },
+    "content": {
+      "type": "text"
+    }
+  }
+}

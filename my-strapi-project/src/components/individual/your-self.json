@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_individual_yourselves",
+  "info": {
+    "displayName": "yourSelf"
+  },
+  "options": {},
+  "attributes": {
+    "descritpionOne": {
+      "type": "text"
+    },
+    "descritpionTwo": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "yourself": {
+      "type": "component",
+      "repeatable": false,
+      "component": "button.button"
+    }
+  }
+}

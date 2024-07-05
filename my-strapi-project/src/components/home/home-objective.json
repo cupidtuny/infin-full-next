@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_home_home_objectives",
+  "info": {
+    "displayName": "home-objective",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "descritpionTop": {
+      "type": "text"
+    },
+    "descritpionBottom": {
+      "type": "text"
+    },
+    "article": {
+      "type": "component",
+      "repeatable": true,
+      "component": "article.article"
+    }
+  }
+}

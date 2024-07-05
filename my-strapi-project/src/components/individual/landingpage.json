@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_individual_landingpages",
+  "info": {
+    "displayName": "landingpage",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "demo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "button.button"
+    },
+    "descritpionOne": {
+      "type": "text"
+    },
+    "descritpionTwo": {
+      "type": "text"
+    }
+  }
+}

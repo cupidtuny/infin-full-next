@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_capitalism_second_parts",
+  "info": {
+    "displayName": "secondPart"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "text"
+    },
+    "answer": {
+      "type": "text"
+    }
+  }
+}

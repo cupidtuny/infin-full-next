@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "marketings",
+  "info": {
+    "singularName": "marketing",
+    "pluralName": "marketings",
+    "displayName": "marketing",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "marketing.landingpage",
+        "marketing.section2",
+        "marketing.section3",
+        "marketing.section4",
+        "marketing.section5"
+      ]
+    }
+  }
+}

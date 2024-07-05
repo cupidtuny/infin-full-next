@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_home_home_chooses",
+  "info": {
+    "displayName": "home-choose",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "article": {
+      "type": "component",
+      "repeatable": false,
+      "component": "article.article"
+    }
+  }
+}
